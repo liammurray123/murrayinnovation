@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/public/assets/logo/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/mobilestyle.css" />
+    <link rel="stylesheet" href="/public/css/topnav.css" />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Mapbox js -->
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+
+    <title>Murray Innovation</title>
+</head>
+
+<body>
+    <main>
+        <section class="header" id="header">
+            <div class="topnav" id="myTopnav">
+                <!-- <img src="/public/assets/icons/logo.svg" id="logo"> -->
+                <a href="/home">Home</a>
+                <a href="/updates">Updates</a>
+                <a href="/contact">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <h2 class="big-text">Contact</h2>
+        </section>
+        <section id="contact">
+            <halfcolumn>
+                <h3>Get In Touch</h3>
+
+                <a href="mailto: murray_innovation@outlook.com">murray_innovation@outlook.com</a>
+                <br />
+                <a href="tel:7789864678">+1 778 986 4678</a>
+                <br />
+                <a>1725 57 St, Delta BC, V4L1Y5</a>
+            </halfcolumn>
+            <halfcolumn>
+                <div id="map" style="width: auto; height: 300px"></div>
+                <script>
+                    mapboxgl.accessToken =
+                        "pk.eyJ1IjoibGlhbW11cnJheTEyMyIsImEiOiJja2cwMm1hdW8wOWhvMzFsZWMzaWpmdjd0In0.fRr5h6t_cO3SuLvyUDBb7w";
+                    var map = new mapboxgl.Map({
+                        container: "map",
+                        style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
+                        center: [-123.068612, 49.024815], // starting position [lng, lat]
+                        zoom: 11, // starting zoom
+                    });
+                    var marker = new mapboxgl.Marker({ color: "#284B63" })
+                        .setLngLat([-123.068612, 49.024815])
+                        .addTo(map);
+                    // Add zoom and rotation controls to the map.
+                    map.addControl(new mapboxgl.NavigationControl());
+                </script>
+            </halfcolumn>
+        </section>
+    </main>
+    <!-- <script src="/public/javascript/animation.js"></script> -->
+    <!-- <script src="/public/javascript/loader.js"></script> -->
+    <script src="/public/javascript/topnav.js"></script>
+</body>
+<footer>
+    <p>© 2020 Kevin Murray. All rights reserved.</p>
+    <p>
+        Website developed by
+        <a href="https://liam-murray.glitch.me">Liam Murray</a>
+    </p>
+</footer>
+
+</html>

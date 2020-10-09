@@ -1,0 +1,33 @@
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+
+  h3,
+  h4,
+  h5 {
+    font-size: 8vw;
+  }
+
+  h5 {
+    font-size: 6vw;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  column {
+    width: 100%;
+  }
+
+  halfcolumn {
+    width: 100%;
+  }
+
+  /* Clear floats after the columns */
+  row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #kevinpic {
+    display: none;
+  }
+}

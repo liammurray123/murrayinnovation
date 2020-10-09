@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/* font-family: 'IBM Plex Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap');
+/* font-family: "Lobster", cursive;
+font-family: "Heebo", sans-serif; */
+
+:root {
+  --MingBlue: #3C6E71;
+  --IndigoDye: #284B63;
+  --GainsboroGray: #D9D9D9;
+  --JetBlack: #353535;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background: white;
+  color: var(--JetBlack);
+  /* overflow: hidden; */
+}
+
+p {
+  size: 1vw;
+  color: var(--JetBlack);
+  font-family: "Heebo", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  width: auto;
+}
+
+.header {
+  background: linear-gradient(-40deg, rgba(40, 75, 99, 1) 50%, rgba(60, 110, 113, 1) 50%);
+}
+
+#main {
+  display: block;
+
+}
+
+#contact,
+#main {
+  padding: 10% 10%;
+}
+
+#contact a {
+  color: var(--JetBlack);
+  font-family: "Heebo", sans-serif;
+  text-decoration: none;
+  display: block;
+  margin-top: 2vh;
+
+}
+
+.landing {
+  min-height: 100vh;
+  background: linear-gradient(-40deg, rgba(40, 75, 99, 1) 50%, rgba(60, 110, 113, 1) 50%);
+  background-size: cover;
+  padding: 0rem 5rem;
+}
+
+#logo {
+  font-family: "Lobster", cursive;
+  font-weight: lighter;
+  font-size: 2rem;
+}
+
+.big-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Left + TOP/Bottom */
+  transform: translate(-50%, -50%);
+  font-size: 10vw;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  /* animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+  /* animation: text-shadow-pop-bl 1s both; */
+  text-shadow: -1px 1px #555555, -2px 2px #555555, -3px 3px #555555, -4px 4px #555555, -5px 5px #555555, -6px 6px #555555, -7px 7px #555555, -8px 8px #555555;
+    
+}
+
+.sub-big-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  /* Left + TOP/Bottom */
+  transform: translate(-50%, -80%);
+  font-size: 2vw;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.big-text #logo {
+  height: 10vw;
+  /* animation: text-shadow-pop-bl 1s both; */
+}
+
+h3,
+h4,
+h5 {
+  font-size: 3vw;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--IndigoDye);
+  text-transform: uppercase;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  /* text-shadow: -1px 1px #555555, -2px 2px #555555, -3px 3px #555555, -4px 4px #555555, -5px 5px #555555, -6px 6px #555555, -7px 7px #555555, -8px 8px #555555; */
+
+}
+
+h5 {
+  font-size: 2vw;
+}
+
+/* Create two equal columns that floats next to each other */
+column {
+  margin-bottom: 5vh;
+  float: left;
+  width: 33%;
+  text-align: center;
+}
+
+halfcolumn {
+  margin-bottom: 5vw;
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+halfcolumn:last-child {
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+footer {
+  padding: 5% 5%;
+  background-color: var(--IndigoDye);
+  text-align: center;
+}
+
+footer p,
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* UI Styleing */
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--IndigoDye);
+  border-radius: 10px;
+}
+
+
+@keyframes text-pop-up-top {
+  0% {
+    transform: translateY(0);
+    transform-origin: 50% 50%;
+    text-shadow: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translateY(-50px);
+    transform-origin: 50% 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+@keyframes text-shadow-pop-bl {
+
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555;
+    transform: translateX(0) translateY(0);
+    /* Alignment Stuff */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    text-shadow: -1px 1px #555555, -2px 2px #555555, -3px 3px #555555, -4px 4px #555555, -5px 5px #555555, -6px 6px #555555, -7px 7px #555555, -8px 8px #555555;
+    transform: translateX(8px) translateY(-8px);
+    /* Alignment Stuff */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
